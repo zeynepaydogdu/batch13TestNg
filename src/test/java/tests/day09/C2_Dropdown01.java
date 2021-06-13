@@ -46,7 +46,7 @@ public class C2_Dropdown01 {
         dropdownListe.selectByIndex(1);
         // 1.Index kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
         System.out.println("listeden  " + dropdownListe.getFirstSelectedOption().getText());
-        System.out.println("get text" + dropdownMenu.getText());
+        //System.out.println("get text" + dropdownMenu.getText());
     }
     @Test
     public void degerKullanma(){
@@ -70,7 +70,8 @@ public class C2_Dropdown01 {
         driver.get("https://the-internet.herokuapp.com/dropdown");
         WebElement acilirListe=driver.findElement(By.xpath("//select[@id='dropdown']"));
         Select select=new Select(acilirListe);
-        List<WebElement> tumOpsiyonlar = select.getOptions();
+
+        List<WebElement> tumOpsiyonlar= select.getOptions();
         //  4.Tüm dropdown değerleri(value) yazdırın
         System.out.println("============================");
         for (WebElement each: tumOpsiyonlar

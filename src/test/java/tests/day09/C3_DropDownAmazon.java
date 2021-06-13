@@ -68,5 +68,31 @@ public class C3_DropDownAmazon {
         WebElement sonucYazisiElementi=driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         System.out.println(sonucYazisiElementi.getText());
         Assert.assertTrue(sonucYazisiElementi.getText().contains("Java"));
+
     }
+    //GECEN DERS TEKRARI
+    //priority: testng ile gelen bir yeniliktirJunit te testler belli bir siraya gore calismaz randomdur
+    //ama testng de alfabetik siraya gore alisir
+    //eger alfabetik siralama disinda ozel bir siralama yapmak istersek priorty ile test methotlarini siralayabiliriiz
+    //priorty sirasi  en kucuk olan once calisir
+    //hem priorty olan hem olmayan testler varsa once priorty olmayan calisir
+    //sonra priorty siralamasi devreye girer.
+
+
+    //dropdown: webelementlerini handle etmek icin 3 adim atmamiz gerekiyor
+    //1. adim = dropdown'i locate etmek
+    //2. adim = locate ettigimiz webelementi parametre olarak kullanip select objesi olusturmak
+    //3. adim = select objesini kullanarak 3 yontemle istedigimiz optionu secebiliriz
+    //1 )selectbyINDEX  2)selectbyVALUE  3)visibletext
+
+    //uyari:dropdown webelementi genelde html tag olarak select i kullanir
+
+    //Eger tum opsiyonlari testimizde kullanmak istiyorsak webelementlerden olusan bir liste olustup
+    //opsiyonlari bu listeye kaydedebiliriz.Bu islem icin getoptions() methodu kullanilr
+    //Eger select objesi ile bir opsiyonu secersek sectigimiz opsiyonu yazdirmak icin
+    // select.getFirstSelectedOption() methodu kullanilir
+    //testng varsa junit kullanmaya gerek kalmamistir
+    //testng ve junit kutuphanelerinin bir projede ayni zamanda kullanilmasi tavsiye edilmez
+
+
 }
